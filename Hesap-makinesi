@@ -1,0 +1,52 @@
+print("""Turk Hack Team Python Programlama Ödevi
+SeNZeRo' un Python Ödevi
+Profil Linki: https://www.turkhackteam.org/members/805290.html
+""")
+kullanici_adi = "SeNZeRo"
+sifre = "THT"
+sistem_giris_hakki = 3
+
+while True:
+    kullanici_adi_yaz = input("Kullanıcı Adınızı Yazınız:")
+    sifre_yaz = input("Şifrenizi Yazınız:")
+    if (kullanici_adi != kullanici_adi_yaz and sifre == sifre_yaz):
+        print("Kullanıcı adı hatalı. Lütfen kullanıcı adını doğru yazdığınızdan emin olun.")
+        sistem_giris_hakki -= 1
+    elif (kullanici_adi == kullanici_adi_yaz and sifre != sifre_yaz):
+        print("Şifre hatalı. Şifeyi doğru girdiğinizden emin olun.")
+        sistem_giris_hakki -= 1
+    elif (kullanici_adi != kullanici_adi_yaz and sifre != sifre_yaz):
+        print("Kullanıcı adı ve şifre hatalı. Lütfen tekrar deneyin.")
+        sistem_giris_hakki -= 1
+    else:
+        print("Giriş başarılı. Sisteme hoş geldiniz.")
+        sayi = 8
+        for i in range(sayi):
+            print(' ' * (sayi - i - 1) + '*' * (2 * i + 1))
+        for i in range(int(sayi / 2)):
+            print(' ' * int(sayi - sayi / 4) + '*' * int(sayi / 2))
+        print("""
+        Yapılacak İşlem Sayıları:
+        1. Toplama İşlemi
+        2. Çıkarma İşlemi
+        3. Çarpma İşlemi
+        4. Bölme İşlemi
+        """)
+        sayi1 = int(input("Bir Sayı Giriniz:"))
+        sayi2 = int(input("Bir Sayı Giriniz:"))
+        yapilacak_islem = input("Yapılacak İşlemin Sayısını Giriniz:")
+        if yapilacak_islem == "1":
+            print("Toplama sonucu:", sayi1 + sayi2)
+        elif yapilacak_islem == "2":
+            print("Çıkarma sonucu:", sayi1 - sayi2)
+        elif yapilacak_islem == "3":
+            print("Çarpma sonucu:", sayi1 * sayi2)
+        elif yapilacak_islem == "4":
+            print("Bölme sonucu:", sayi1 / sayi2)
+        else:
+            print("Lütfen yapılacak işlemi doğru giriniz.")
+            break
+        break
+    if (sistem_giris_hakki == 0):
+        print("Üç kere yanlış girdiniz. Lütfen 15 dakika sonra tekrar deneyiniz.")
+        break
