@@ -1,0 +1,30 @@
+print("""
+****** Hesap Makinesi ******
+* İşlem Seçenekleri:
+1. Seçenek = Toplama
+2. Seçenek = Çıkarma
+3. Seçenek = Çarpma
+4. Seçenek = Bölme
+""")
+def toplama():
+    print("İşlem sonucu:", sayi_1 + sayi_2)
+def cıkarma():
+    print("İşlem sonucu:", sayi_1 - sayi_2)
+def carpma():
+    print("İşlem sonucu:", sayi_1 * sayi_2)
+def bolme():
+    print("İşlem sonucu:", sayi_1 / sayi_2)
+
+secenek_sec = int(input("Yapmak istediğiniz işlemin seçeneğini seçiniz:"))
+sayi_1 = int(input("Birinci sayıyı giriniz:"))
+sayi_2 = int(input("İkinci sayıyı giriniz:"))
+if secenek_sec == 1:
+    toplama()
+elif secenek_sec == 2:
+    cıkarma()
+elif secenek_sec == 3:
+   carpma()
+elif secenek_sec == 4:
+    bolme()
+else:
+    print("Lütfen yapmak istediğiniz işlem seçeneği seçiniz.")
