@@ -27,4 +27,4 @@ elif secenek_sec == 3:
 elif secenek_sec == 4:
     bolme()
 else:
-    print("Lütfen yapmak istediğiniz işlem seçeneği seçiniz.")
+    print("Lütfen yapmak istediğiniz işlemin seçeneğini seçiniz.")
